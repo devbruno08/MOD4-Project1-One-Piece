@@ -8,8 +8,12 @@
     
 }
 
+.piece-logo {
+    margin-top: 2px;
+}
+
 .insert-button {
     color: black;
     background-color: #c07d00;
-    
+    cursor: pointer;
 }
