@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { api } from '../../utils/api/api';
-import "./form.css"
+import './form.css';
 
 export function Form({ getAll, handleModal }) {
   const [newCharacter, setNewCharacter] = useState([]);
@@ -12,10 +12,9 @@ export function Form({ getAll, handleModal }) {
     handleModal();
     api.createCharacter(newCharacter);
     setTimeout(() => {
-      getAll()
+      getAll();
     }, 3000);
     setLoading(false);
-     
   }
 
   return (
@@ -31,7 +30,10 @@ export function Form({ getAll, handleModal }) {
                 type="text"
                 name="name"
                 onChange={(event) => {
-                  setNewCharacter({ ...newCharacter, name: event.target.value });
+                  setNewCharacter({
+                    ...newCharacter,
+                    name: event.target.value,
+                  });
                 }}
               ></input>
             </section>
@@ -41,7 +43,10 @@ export function Form({ getAll, handleModal }) {
                 type="text"
                 name="title"
                 onChange={(event) => {
-                  setNewCharacter({ ...newCharacter, title: event.target.value });
+                  setNewCharacter({
+                    ...newCharacter,
+                    title: event.target.value,
+                  });
                 }}
               ></input>
             </section>
@@ -51,7 +56,10 @@ export function Form({ getAll, handleModal }) {
                 type="text"
                 name="gender"
                 onChange={(event) => {
-                  setNewCharacter({ ...newCharacter, gender: event.target.value });
+                  setNewCharacter({
+                    ...newCharacter,
+                    gender: event.target.value,
+                  });
                 }}
               ></input>
             </section>
@@ -61,7 +69,10 @@ export function Form({ getAll, handleModal }) {
                 type="text"
                 name="imageURL"
                 onChange={(event) => {
-                  setNewCharacter({ ...newCharacter, imageURL: event.target.value });
+                  setNewCharacter({
+                    ...newCharacter,
+                    imageURL: event.target.value,
+                  });
                 }}
               ></input>
             </section>
