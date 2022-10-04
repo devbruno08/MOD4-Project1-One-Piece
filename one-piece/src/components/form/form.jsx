@@ -2,17 +2,19 @@ import { useState } from 'react';
 import { api } from '../../utils/api/api';
 
 export function Form({ getAll, handleModal }) {
-  const [newAnime, setNewCharacter] = useState({ characters: [] });
+  const [newCharacter, setNewCharacter] = useState([]);
   const [loading, setLoading] = useState(false);
 
   async function handleSubmit(event) {
     setLoading(true);
     event.preventDefault();
-
-    await api.createCharacter(newAnime);
-    await getAll();
-    setLoading(false);
     handleModal();
+    api.createCharacter(newCharacter);
+    setTimeout(() => {
+      getAll()
+    }, 3000);
+    setLoading(false);
+     
   }
 
   return (
@@ -28,7 +30,7 @@ export function Form({ getAll, handleModal }) {
                 type="text"
                 name="name"
                 onChange={(event) => {
-                  setNewCharacter({ ...newAnime, name: event.target.value });
+                  setNewCharacter({ ...newCharacter, name: event.target.value });
                 }}
               ></input>
             </section>
@@ -38,7 +40,7 @@ export function Form({ getAll, handleModal }) {
                 type="text"
                 name="title"
                 onChange={(event) => {
-                  setNewCharacter({ ...newAnime, title: event.target.value });
+                  setNewCharacter({ ...newCharacter, title: event.target.value });
                 }}
               ></input>
             </section>
@@ -48,7 +50,17 @@ export function Form({ getAll, handleModal }) {
                 type="text"
                 name="gender"
                 onChange={(event) => {
-                  setNewCharacter({ ...newAnime, gender: event.target.value });
+                  setNewCharacter({ ...newCharacter, gender: event.target.value });
+                }}
+              ></input>
+            </section>
+            <section>
+              <span>ImageURL:</span>
+              <input
+                type="text"
+                name="imageURL"
+                onChange={(event) => {
+                  setNewCharacter({ ...newCharacter, imageURL: event.target.value });
                 }}
               ></input>
             </section>

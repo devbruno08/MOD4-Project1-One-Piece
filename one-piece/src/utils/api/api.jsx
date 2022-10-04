@@ -1,20 +1,20 @@
 const defaultUrl = "https://piece-api.herokuapp.com/characters";
 
 export const api = {
-    createCharacter: async (anime) => {
+    createCharacter: async (character) => {
       const response = await fetch(defaultUrl + "/create", {
         method: "POST",
         headers: new Headers({ "Content-Type": "application/json" }),
-        body: JSON.stringify(anime),
+        body: JSON.stringify(character),
       });
-      const newAnime = await response.json();
-      return newAnime;
+      const newCharacter = await response.json();
+      return newCharacter;
     },
 
     getAllCharacters: async () => {
         const response = await fetch(defaultUrl + "/all-characters");
         const allCharacters = await response.json();
-    
+        console.log(allCharacters);
         return allCharacters;
       },
 
@@ -27,11 +27,11 @@ export const api = {
         return characterDeleted;
       },
 
-      updateAnime: async (anime) => {
+      updateCharacter: async (character) => {
         const response = await fetch(defaultUrl + "/update", {
           method: "PUT",
           headers: new Headers({ "Content-Type": "application/json" }),
-          body: JSON.stringify(anime),
+          body: JSON.stringify(character),
         });
     
         const characterUpdated = await response.json();
