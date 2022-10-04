@@ -9,7 +9,6 @@
     padding: 5px;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
     border-radius: 10px;
     margin: 10px;
     transition: all 0.3s ease-out;
@@ -35,9 +34,7 @@
 }
 
 .cards-infos{
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
