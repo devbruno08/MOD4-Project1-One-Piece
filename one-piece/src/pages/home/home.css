@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+
 .home-page {
     height: 100%;
     width: 100%;
@@ -7,17 +9,54 @@
   .card {
     display: flex;
     flex-wrap: wrap;
-    width: 450px;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: space-around;
     align-content: center;
-    
   }
   
   .button-card {
-    display: flex;
-    width: 50%;
+    width: 210px;
     background-color: transparent;
     cursor: pointer;
     border: none;
+  }
 
+  .image-modal {
+    width: 200px;
+    height: 180px;
+  }
+
+  .form{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .modal-infs{
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+  }
+
+  .button-edit{
+    font-weight: bold;
+    font-size:larger;
+    margin: 0 auto;
+    background-color: green;
+    padding: 10px;
+  }
+
+  .button-delete{
+    font-weight: bold;
+    font-size: larger;
+    margin: 0 auto;
+    background-color: red;
+    padding: 10px;
   }

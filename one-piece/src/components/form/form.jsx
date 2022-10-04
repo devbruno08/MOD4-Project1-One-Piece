@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { api } from '../../utils/api/api';
+import "./form.css"
 
 export function Form({ getAll, handleModal }) {
   const [newCharacter, setNewCharacter] = useState([]);
@@ -64,8 +65,8 @@ export function Form({ getAll, handleModal }) {
                 }}
               ></input>
             </section>
-            <button type="submit" className="btn=submit">
-              Enter
+            <button type="submit" className="btn-submit">
+              Submit
             </button>
           </form>
         </div>
