@@ -16,8 +16,9 @@
     transform: translateY(-5px);
 }
 
-.card-title{
-    margin-top: 50%;
+.card-image{
+    width: 150px;
+    height: 80px;
 }
 
 .cards-infos{

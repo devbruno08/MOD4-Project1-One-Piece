@@ -4,7 +4,7 @@ export function Card({ name, title, imageURL, gender }) {
     return (
         <div className="cards">
             <h2>Wanted</h2>
-            <img src={imageURL} alt={name} />
+            <img src={imageURL} alt={name} className="card-image" />
             <h2>{name}</h2>
             <section className="cards-infos">
                 <span className="card-title">Title:</span>
